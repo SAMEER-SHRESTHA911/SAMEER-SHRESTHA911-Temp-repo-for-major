@@ -1,0 +1,53 @@
+[
+    {
+      "tag": "Positive",
+      "confidence": 92.1,
+      "aspectTerms": ["Aspect 1", "Aspect 2", "Aspect 3"]
+    },
+    {
+      "tag": "Negative",
+      "confidence": 75.5,
+      "aspectTerms": ["Aspect A", "Aspect B"]
+    },
+    {
+      "tag": "Neutral",
+      "confidence": 50.0,
+      "aspectTerms": ["Aspect X"]
+    },
+    {
+      "tag": "Positive",
+      "confidence": 88.9,
+      "aspectTerms": ["Aspect Y", "Aspect Z"]
+    },
+    {
+      "tag": "Negative",
+      "confidence": 65.3,
+      "aspectTerms": ["Aspect C", "Aspect D"]
+    },
+    {
+      "tag": "Neutral",
+      "confidence": 55.6,
+      "aspectTerms": ["Aspect P", "Aspect Q"]
+    },
+    {
+      "tag": "Positive",
+      "confidence": 91.2,
+      "aspectTerms": ["Aspect M", "Aspect N"]
+    },
+    {
+      "tag": "Negative",
+      "confidence": 78.7,
+      "aspectTerms": ["Aspect K", "Aspect L"]
+    },
+    {
+      "tag": "Neutral",
+      "confidence": 42.8,
+      "aspectTerms": ["Aspect R", "Aspect S"]
+    },
+    {
+      "tag": "Positive",
+      "confidence": 93.5,
+      "aspectTerms": ["Aspect E", "Aspect F"]
+    }
+  ]
+  

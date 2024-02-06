@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 
-const SentimentResult = () => {
+const SentimentResult = ({resp}) => {
   const [sentimentData, setSentimentData] = useState({
     tag: "Positive",
     confidence: 80,

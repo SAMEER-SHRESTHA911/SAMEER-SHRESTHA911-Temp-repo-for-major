@@ -26,14 +26,16 @@ const FormText = ({resp, setResp}) => {
       console.log('Text submitted:',text);
       //send the text to backend
       //accept response from backend
-      //setResp(response from backend)
+      // setResp("response from backend");
     } 
   }
 
   return (
     <>
         <div className="formtext">
-          <h2>Enter The Text</h2>
+          <div className='title'>
+            <h2>Enter The Text</h2>
+          </div>
           <form onSubmit={handleFormSubmit}>
             <textarea 
               value = {text} 
@@ -41,7 +43,7 @@ const FormText = ({resp, setResp}) => {
               onKeyDown={(e)=>handleFormSubmit(e)}
               placeholder="एशियन लाईफको बोनस शेयर शेयरधनीको हितग्राही खातामा जम्मा"
             />
-            <button type="classify">Classify Text</button>
+            <button className = "classify"type="submit">Classify Text</button>
           </form>
         </div>
     </>

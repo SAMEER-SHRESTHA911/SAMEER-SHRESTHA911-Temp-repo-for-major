@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 
-const SentimentResult = () => {
+const SentimentResult = ({resp}) => {
   const [sentimentData, setSentimentData] = useState({
     tag: "Positive",
     confidence: 80,
@@ -36,12 +36,18 @@ const SentimentResult = () => {
   return (
     <>
       <div className="sentimentResult">
-        <h2>Results</h2>
-        <div className="resultHeading">
-          <span><b>ASPECTS</b></span>
-          <span><b>SENTIMENT</b></span>
-          {/* <span><b>CONFIDENCE</b></span> */}
+        <div className ="title">
+          <h2>Results</h2>
         </div>
+        <div className="resultHeading">
+          <div>
+            <h4>ASPECTS</h4>
+          </div>
+          <div>
+            <h4>SENTIMENTS</h4>
+          </div>
+        </div>
+          {/* <span><b>CONFIDENCE</b></span> */}
         {/* <div className="resultBody">
           <div className="aspectTerms">
           {sentimentData.aspectTerms.map((aspect, index) => (
@@ -50,12 +56,13 @@ const SentimentResult = () => {
             </li>
           ))}
         </div> */}
-          <div className ="aspectTerms">
+          <div className="aspectTerms">
             {sentimentData.aspectTerms.map((aspect,index) => (
-            
-              <div className="aspectTermSingle">
-                <span>{aspect.term}</span>
-                <span>{aspect.tag}</span>
+              <div className="aspectTermSingle" key={index}>
+                <div className="word">{aspect.term}</div>
+                
+                <div className={aspect.tag === 'Positive'? 'positive':'negative'}>{aspect.tag}</div>  
+                
                 {/* <span className ="percentage"><b>{aspect.confidence}</b></span> */}
               </div>
           ))}
@@ -87,6 +94,9 @@ const SentimentResult = () => {
           </li>
           ))}
         </div> */}
+        </div>
+        <div>
+          <p>{resp}</p>
         </div>
     </>
   );
